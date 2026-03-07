@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Blog | Pratibha Ultra Scan Center</title>
+    <meta name="description" content="Expert health insights, diagnostic guides, and wellness tips from the medical team at Pratibha Ultra Scan Center, Ranaghat.">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/blog.css">
+</head>
+<body>
+
+    <!-- ── Navigation ───────────────────────────────── -->
+    <header id="main-header">
+        <nav class="container">
+            <a href="../index.html" class="logo">Pratibha <span>Ultra Scan Center</span></a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">&#9776;</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html#hero">Home</a></li>
+                <li><a href="../index.html#services">Services</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="blog.html" style="color:var(--primary);font-weight:700;">Blog</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="opd.html">OPD</a></li>
+                <li><a href="../index.html#contact" class="btn-primary">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ── Hero ─────────────────────────────────────── -->
+    <section class="blog-hero">
+        <div class="blog-hero-inner">
+            <span class="blog-hero-label">Health &amp; Wellness</span>
+            <h1>Insights from Our Medical Experts</h1>
+            <p>Evidence-based articles on diagnostics, preventive care, and everyday wellness — written by the team at Pratibha Ultra Scan Center.</p>
+            <div class="blog-hero-search">
+                <input type="text" id="searchInput" placeholder="Search articles, topics, conditions…" aria-label="Search blog">
+                <button onclick="searchBlog()">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Stats Bar ──────────────────────────────────── -->
+    <div class="blog-stats">
+        <div class="blog-stats-inner">
+            <div class="stat-item"><span>8+</span><p>Articles</p></div>
+            <div class="stat-item"><span>4</span><p>Categories</p></div>
+            <div class="stat-item"><span>10 Yrs</span><p>Experience</p></div>
+            <div class="stat-item"><span>Free</span><p>Health Advice</p></div>
+        </div>
+    </div>
+
+    <!-- ── Category Tab Bar ───────────────────────────── -->
+    <div class="category-bar">
+        <div class="container">
+            <div class="category-bar-inner" id="catBar">
+                <button class="cat-tab active" data-filter="all">All Articles</button>
+                <button class="cat-tab" data-filter="diagnostics">Diagnostics</button>
+                <button class="cat-tab" data-filter="wellness">Wellness</button>
+                <button class="cat-tab" data-filter="tips">Health Tips</button>
+                <button class="cat-tab" data-filter="pathology">Pathology</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── Main Content ───────────────────────────────── -->
+    <div class="blog-layout">
+        <div class="container">
+            <div class="blog-layout-inner">
+
+                <!-- Content Column -->
+                <main id="blogContent">
+
+                    <!-- Featured Article -->
+                    <article class="featured-article" data-category="diagnostics">
+                        <div class="featured-img">
+                            <span class="featured-img-icon">🩻</span>
+                            <span class="featured-badge">Featured</span>
+                        </div>
+                        <div class="featured-body">
+                            <span class="article-tag">Diagnostics</span>
+                            <h2>What to Expect During Your First CT Scan — A Complete Patient Guide</h2>
+                            <p>A CT scan can feel overwhelming if you've never had one before. In this comprehensive guide, we walk you through every step — preparation and fasting rules, what happens inside the scanner, contrast dye considerations, radiation safety, and when to expect your report. Our goal is to ensure you arrive at our center calm, informed, and confident in your care.</p>
+                            <div class="article-meta">
+                                <div class="author-avatar">Dr</div>
+                                <span class="meta-author">Dr. Pratibha Sharma</span>
+                                <span class="meta-dot">·</span>
+                                <span>March 5, 2026</span>
+                                <span class="meta-dot">·</span>
+                                <span class="meta-tag read">5 min read</span>
+                                <a href="#" class="read-btn">Read Article</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article Grid -->
+                    <div class="articles-grid" id="articlesGrid">
+
+                        <article class="article-card" data-category="diagnostics">
+                            <div class="card-img" style="background:linear-gradient(135deg,#e3f2fd,#bbdefb);">🔬</div>
+                            <div class="card-body">
+                                <span class="article-tag">Diagnostics</span>
+                                <h3>USG vs CT Scan: Which One Does Your Doctor Actually Need?</h3>
+                                <p>Both are powerful but serve different purposes. Learn when your doctor chooses one over the other and why — so you can ask better questions at your next visit.</p>
+                                <div class="card-meta">
+                                    <span>Feb 28, 2026 &nbsp;·&nbsp; <strong style="color:var(--primary)">4 min</strong></span>
+                                    <a href="#" class="card-read-link">Read →</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="article-card" data-category="wellness">
+                            <div class="card-img" style="background:linear-gradient(135deg,#e8f5e9,#c8e6c9);">❤️‍🩹</div>
+                            <div class="card-body">
+                                <span class="article-tag wellness">Wellness</span>
+                                <h3>Why Annual Health Check-ups Are the Most Underrated Investment You Can Make</h3>
+                                <p>Most critical conditions — hypertension, early-stage diabetes, thyroid disorders — have no obvious symptoms. Catch them before they escalate.</p>
+                                <div class="card-meta">
+                                    <span>Feb 20, 2026 &nbsp;·&nbsp; <strong style="color:var(--primary)">3 min</strong></span>
+                                    <a href="#" class="card-read-link">Read →</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="article-card" data-category="pathology">
+                            <div class="card-img" style="background:linear-gradient(135deg,#fce4ec,#f8bbd0);">🩸</div>
+                            <div class="card-body">
+                                <span class="article-tag pathology">Pathology</span>
+                                <h3>Decoding Your Blood Test Report: What CBC, HbA1c, and Lipid Panel Mean</h3>
+                                <p>Numbers and abbreviations explained in plain language — so you can understand your own health data before your doctor's appointment.</p>
+                                <div class="card-meta">
+                                    <span>Feb 12, 2026 &nbsp;·&nbsp; <strong style="color:var(--primary)">6 min</strong></span>
+                                    <a href="#" class="card-read-link">Read →</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="article-card" data-category="tips">
+                            <div class="card-img" style="background:linear-gradient(135deg,#fff3e0,#ffe0b2);">🫀</div>
+                            <div class="card-body">
+                                <span class="article-tag tips">Health Tips</span>
+                                <h3>5 Clinically-Backed Habits That Protect Your Heart Over a Lifetime</h3>
+                                <p>Heart disease is largely preventable. These five habits — backed by peer-reviewed research — make the biggest measurable difference to your cardiac health.</p>
+                                <div class="card-meta">
+                                    <span>Feb 5, 2026 &nbsp;·&nbsp; <strong style="color:var(--primary)">4 min</strong></span>
+                                    <a href="#" class="card-read-link">Read →</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="article-card" data-category="diagnostics">
+                            <div class="card-img" style="background:linear-gradient(135deg,#e8eaf6,#c5cae9);">📈</div>
+                            <div class="card-body">
+                                <span class="article-tag">Diagnostics</span>
+                                <h3>ECG Explained: What the Waves on Your Heart Tracing Actually Mean</h3>
+                                <p>An ECG records your heart's electrical signals. This plain-language guide helps you understand P waves, QRS complexes, and what arrhythmias look like.</p>
+                                <div class="card-meta">
+                                    <span>Jan 28, 2026 &nbsp;·&nbsp; <strong style="color:var(--primary)">3 min</strong></span>
+                                    <a href="#" class="card-read-link">Read →</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="article-card" data-category="wellness">
+                            <div class="card-img" style="background:linear-gradient(135deg,#e0f2f1,#b2dfdb);">🥗</div>
+                            <div class="card-body">
+                                <span class="article-tag wellness">Wellness</span>
+                                <h3>Diabetes Management Through Diet: What Indian Research Actually Shows</h3>
+                                <p>Region-specific dietary advice rooted in Indian food culture — from the glycaemic index of rice and roti to smart meal timing and portion control strategies.</p>
+                                <div class="card-meta">
+                                    <span>Jan 18, 2026 &nbsp;·&nbsp; <strong style="color:var(--primary)">5 min</strong></span>
+                                    <a href="#" class="card-read-link">Read →</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="article-card" data-category="tips">
+                            <div class="card-img" style="background:linear-gradient(135deg,#fafafa,#e3f0ff);">🤰</div>
+                            <div class="card-body">
+                                <span class="article-tag tips">Health Tips</span>
+                                <h3>Pregnancy Ultrasound Schedule: What Each Trimester Scan Checks For</h3>
+                                <p>A month-by-month breakdown of which ultrasounds are recommended, what each one measures, and what findings can reassure or alert your obstetrics team.</p>
+                                <div class="card-meta">
+                                    <span>Jan 10, 2026 &nbsp;·&nbsp; <strong style="color:var(--primary)">7 min</strong></span>
+                                    <a href="#" class="card-read-link">Read →</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="article-card" data-category="pathology">
+                            <div class="card-img" style="background:linear-gradient(135deg,#f3e5f5,#e1bee7);">🧫</div>
+                            <div class="card-body">
+                                <span class="article-tag pathology">Pathology</span>
+                                <h3>Thyroid Function Tests: TSH, T3, T4 — What You Need to Know Before Testing</h3>
+                                <p>Thyroid disorders are among the most commonly missed in routine care. This guide covers when to test, how to prepare, and how to interpret your results accurately.</p>
+                                <div class="card-meta">
+                                    <span>Jan 2, 2026 &nbsp;·&nbsp; <strong style="color:var(--primary)">4 min</strong></span>
+                                    <a href="#" class="card-read-link">Read →</a>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div><!-- end .articles-grid -->
+                    <p id="noResults" style="display:none;text-align:center;color:var(--text-light);padding:40px 0;font-size:1rem;">No articles found. Try a different search term.</p>
+
+                </main>
+
+                <!-- ── Sidebar ─────────────────────────── -->
+                <aside class="blog-sidebar">
+
+                    <!-- Categories -->
+                    <div class="sidebar-widget">
+                        <h3>Browse by Category</h3>
+                        <ul class="cat-list">
+                            <li onclick="filterByCategory('diagnostics')"><span>Diagnostics</span><span class="cat-count">3</span></li>
+                            <li onclick="filterByCategory('wellness')"><span>Wellness</span><span class="cat-count">2</span></li>
+                            <li onclick="filterByCategory('pathology')"><span>Pathology</span><span class="cat-count">2</span></li>
+                            <li onclick="filterByCategory('tips')"><span>Health Tips</span><span class="cat-count">2</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Popular Posts -->
+                    <div class="sidebar-widget">
+                        <h3>Most Read</h3>
+                        <div class="popular-post">
+                            <span class="pp-num">01</span>
+                            <div>
+                                <div class="pp-title">CT Scan: A Complete Patient Guide</div>
+                                <div class="pp-date">March 5, 2026</div>
+                            </div>
+                        </div>
+                        <div class="popular-post">
+                            <span class="pp-num">02</span>
+                            <div>
+                                <div class="pp-title">Decoding Your Blood Test Report</div>
+                                <div class="pp-date">Feb 12, 2026</div>
+                            </div>
+                        </div>
+                        <div class="popular-post">
+                            <span class="pp-num">03</span>
+                            <div>
+                                <div class="pp-title">Pregnancy Ultrasound Schedule</div>
+                                <div class="pp-date">Jan 10, 2026</div>
+                            </div>
+                        </div>
+                        <div class="popular-post">
+                            <span class="pp-num">04</span>
+                            <div>
+                                <div class="pp-title">5 Habits That Protect Your Heart</div>
+                                <div class="pp-date">Feb 5, 2026</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Daily Health Tip -->
+                    <div class="sidebar-widget tip-widget">
+                        <h3>Today's Health Tip</h3>
+                        <p class="tip-text">"Drink at least 8 glasses of water daily. Even mild dehydration can affect kidney function and make blood tests less accurate."</p>
+                        <p class="tip-source">— Pratibha Medical Team</p>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="sidebar-widget newsletter-widget">
+                        <h3>Weekly Health Digest</h3>
+                        <p>Get our best articles and health tips delivered every Monday. No spam — just useful medical insights.</p>
+                        <form onsubmit="handleNewsletter(event)">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit" id="subBtn">Subscribe for Free</button>
+                        </form>
+                    </div>
+
+                    <!-- Book CTA -->
+                    <div class="sidebar-widget" style="background:linear-gradient(135deg,#003366,#0056b3);color:white;text-align:center;">
+                        <div style="font-size:2.5rem;margin-bottom:12px;">📅</div>
+                        <h3 style="color:rgba(255,255,255,0.65);border-color:rgba(255,255,255,0.15);">Ready to Get Tested?</h3>
+                        <p style="font-size:0.9rem;opacity:0.85;margin-bottom:18px;line-height:1.6;">Don't wait for symptoms. Book a diagnostic appointment at our Ranaghat center today.</p>
+                        <a href="appointment.html" class="read-btn" style="display:block;text-align:center;">Book Appointment</a>
+                    </div>
+
+                </aside>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ── Footer ────────────────────────────────────── -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">Pratibha <span>Ultra Scan Center</span></div>
+                <p>&copy; 2026 Pratibha Ultra Scan Center. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#">FB</a>
+                    <a href="#">TW</a>
+                    <a href="#">IG</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ── Hamburger ─────────────────────────────────
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks   = document.getElementById('navLinks');
+        menuToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+        navLinks.querySelectorAll('a').forEach(l => l.addEventListener('click', () => navLinks.classList.remove('open')));
+
+        // ── Category filter (tabs + sidebar) ─────────
+        const allCards = () => [...document.querySelectorAll('.article-card, .featured-article')];
+
+        function filterByCategory(cat) {
+            // Sync tab highlight
+            document.querySelectorAll('.cat-tab').forEach(t => {
+                t.classList.toggle('active', t.dataset.filter === cat || (cat === 'all' && t.dataset.filter === 'all'));
+            });
+            applyFilter(cat);
+        }
+
+        document.querySelectorAll('.cat-tab').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.cat-tab').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                applyFilter(btn.dataset.filter);
+            });
+        });
+
+        function applyFilter(cat) {
+            allCards().forEach(card => {
+                const match = cat === 'all' || card.dataset.category === cat;
+                card.style.display = match ? '' : 'none';
+            });
+        }
+
+        // ── Search ────────────────────────────────────
+        function searchBlog() {
+            const term = document.getElementById('searchInput').value.toLowerCase().trim();
+            let found = 0;
+            allCards().forEach(card => {
+                const text = card.textContent.toLowerCase();
+                const show = !term || text.includes(term);
+                card.style.display = show ? '' : 'none';
+                if (show) found++;
+            });
+            document.getElementById('noResults').style.display = found === 0 ? 'block' : 'none';
+            // Reset active tab
+            document.querySelectorAll('.cat-tab').forEach(b => b.classList.remove('active'));
+            document.querySelector('[data-filter="all"]').classList.add('active');
+        }
+        document.getElementById('searchInput').addEventListener('keydown', e => { if (e.key === 'Enter') searchBlog(); });
+
+        // ── Newsletter ────────────────────────────────
+        function handleNewsletter(e) {
+            e.preventDefault();
+            const btn = document.getElementById('subBtn');
+            btn.textContent = '✓ You\'re subscribed!';
+            btn.style.background = '#25D366';
+            e.target.querySelector('input').value = '';
+            setTimeout(() => { btn.textContent = 'Subscribe for Free'; btn.style.background = ''; }, 3500);
+        }
+    </script>
+</body>
+</html>

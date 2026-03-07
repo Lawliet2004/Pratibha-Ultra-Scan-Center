@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment | Pratibha Ultra Scan Center</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/appointment.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Shared Header -->
+    <header id="main-header">
+        <nav class="container">
+            <a href="../index.html" class="logo">Pratibha <span>Ultra Scan Center</span></a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">&#9776;</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html#hero">Home</a></li>
+                <li><a href="../index.html#services">Services</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="opd.html">OPD</a></li>
+                <li><a href="../index.html#contact" class="btn-primary">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Booking Page -->
+    <div class="appt-page">
+        <div class="appt-card">
+
+            <!-- ── BOOKING FORM ─────────────────────────── -->
+            <div id="formSection">
+                <div class="appt-header">
+                    <span class="page-icon">📅</span>
+                    <h1>Book an Appointment</h1>
+                    <p>Fill in the details below — we'll confirm your slot by phone.</p>
+                </div>
+
+                <form class="appt-form" id="bookingForm" novalidate>
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="b-name">Full Name *</label>
+                            <input type="text" id="b-name" placeholder="e.g. Ramesh Biswas" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="b-phone">Phone Number *</label>
+                            <input type="tel" id="b-phone" placeholder="e.g. 98765 43210" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="b-date">Preferred Date *</label>
+                            <input type="date" id="b-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="b-time">Preferred Time *</label>
+                            <select id="b-time" required>
+                                <option value="" disabled selected>Select a time slot</option>
+                                <option>10:00 AM – 11:00 AM</option>
+                                <option>11:00 AM – 12:00 PM</option>
+                                <option>12:00 PM – 01:00 PM</option>
+                                <option>03:00 PM – 04:00 PM</option>
+                                <option>04:00 PM – 05:00 PM</option>
+                                <option>05:00 PM – 06:00 PM</option>
+                                <option>07:00 PM – 08:00 PM</option>
+                                <option>08:00 PM – 09:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="b-service">Service Required *</label>
+                        <select id="b-service" required>
+                            <option value="" disabled selected>Select a service</option>
+                            <option>CT Scan</option>
+                            <option>USG (Ultrasonography)</option>
+                            <option>Digital X-Ray</option>
+                            <option>ECG &amp; EEG</option>
+                            <option>Pathology Test</option>
+                            <option>Nursing Home</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="b-note">Additional Notes</label>
+                        <textarea id="b-note" rows="3" placeholder="Any specific symptoms or doctor preferences..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-main submit-btn">Confirm Appointment</button>
+                </form>
+                <a href="../index.html" class="back-link">← Back to Home</a>
+            </div>
+
+            <!-- ── RECEIPT (shown after submit) ────────── -->
+            <div class="receipt-section" id="receiptSection">
+                <div class="receipt-card">
+                    <div class="receipt-top">
+                        <div class="tick">✅</div>
+                        <h2>Appointment Confirmed!</h2>
+                        <p>Pratibha Ultra Scan Center, Ranaghat</p>
+                        <p class="receipt-id" id="receiptId"></p>
+                    </div>
+                    <table class="receipt-table">
+                        <tr><td>👤 Patient</td><td id="r-name"></td></tr>
+                        <tr><td>📞 Phone</td><td id="r-phone"></td></tr>
+                        <tr><td>🗓️ Date</td><td id="r-date"></td></tr>
+                        <tr><td>🕒 Time</td><td id="r-time"></td></tr>
+                        <tr><td>🏥 Service</td><td id="r-service"></td></tr>
+                        <tr><td>📋 Notes</td><td id="r-note"></td></tr>
+                    </table>
+                </div>
+
+                <!-- WhatsApp share button -->
+                <a class="wa-btn" id="waBtn" href="#" target="_blank" rel="noopener">
+                    <span class="wa-icon">📲</span> Send Receipt via WhatsApp
+                </a>
+
+                <button class="new-appt-btn" id="newApptBtn">+ Book Another Appointment</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../js/appointment.js"></script>
+</body>
+</html>

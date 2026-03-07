@@ -1,0 +1,206 @@
+/* ═══════════════════════════════════════════════════════
+   appointment.css  —  Styles for the booking page only
+   ═══════════════════════════════════════════════════════ */
+
+/* ── Page Layout ─────────────────────────────────── */
+.appt-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e8f4fd 0%, #f0fafe 100%);
+    padding: 100px 20px 60px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.appt-card {
+    background: #fff;
+    border-radius: 24px;
+    padding: 50px 50px 40px;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 20px 60px rgba(0, 86, 179, 0.1);
+}
+
+/* ── Header ──────────────────────────────────────── */
+.appt-header {
+    text-align: center;
+    margin-bottom: 36px;
+}
+.appt-header .page-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 12px;
+}
+.appt-header h1 {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+.appt-header p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+/* ── Form ────────────────────────────────────────── */
+.appt-form .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+.appt-form label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+}
+.appt-form .form-group {
+    margin-bottom: 18px;
+}
+.appt-form input.error,
+.appt-form select.error,
+.appt-form textarea.error {
+    border-color: #e74c3c;
+}
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    font-size: 1.05rem;
+    border-radius: 14px;
+    margin-top: 6px;
+    letter-spacing: 0.3px;
+}
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 18px;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+.back-link:hover { color: var(--primary); }
+
+/* ── Receipt Card (hidden until submit) ──────────── */
+.receipt-section {
+    display: none;
+}
+.receipt-section.visible {
+    display: block;
+    animation: fadeUp 0.4s ease;
+}
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.receipt-card {
+    border: 2px dashed var(--secondary);
+    border-radius: 18px;
+    padding: 30px;
+    background: #f0fafe;
+    margin-bottom: 24px;
+}
+.receipt-card .receipt-top {
+    text-align: center;
+    margin-bottom: 24px;
+}
+.receipt-card .receipt-top .tick {
+    font-size: 3rem;
+}
+.receipt-card .receipt-top h2 {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin: 8px 0 4px;
+}
+.receipt-card .receipt-top p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+.receipt-id {
+    font-size: 0.78rem;
+    color: var(--text-light);
+    margin-top: 4px;
+}
+
+.receipt-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.receipt-table tr {
+    border-bottom: 1px solid #e8f0fe;
+}
+.receipt-table tr:last-child { border-bottom: none; }
+.receipt-table td {
+    padding: 10px 6px;
+    font-size: 0.92rem;
+    vertical-align: top;
+}
+.receipt-table td:first-child {
+    font-weight: 600;
+    color: var(--text-dark);
+    width: 40%;
+}
+.receipt-table td:last-child {
+    color: var(--primary);
+    font-weight: 500;
+}
+
+/* ── WhatsApp Button ─────────────────────────────── */
+.wa-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 16px;
+    background: #25D366;
+    color: white;
+    border: none;
+    border-radius: 14px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-bottom: 12px;
+    font-family: 'Inter', sans-serif;
+}
+.wa-btn:hover {
+    background: #1ebe5a;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
+}
+.wa-icon {
+    font-size: 1.4rem;
+}
+.new-appt-btn {
+    width: 100%;
+    padding: 13px;
+    background: var(--accent);
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: 14px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+}
+.new-appt-btn:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* ── Mobile ──────────────────────────────────────── */
+@media (max-width: 600px) {
+    .appt-card {
+        padding: 30px 20px;
+        border-radius: 16px;
+    }
+    .appt-form .row {
+        grid-template-columns: 1fr;
+    }
+    .appt-header h1 {
+        font-size: 1.5rem;
+    }
+}
